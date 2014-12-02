@@ -1,0 +1,13 @@
+<%= form_for @user do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label :email %>
+  <%= f.text_field :email %>
+
+  <%= f.label :organization %>
+  <%= f.select :organization_id, 
+  options_from_collection_for_select(Organization.all, :id, :name) %>
+
+  <%= f.submit 'Create that user!' %>
+<% end %>
