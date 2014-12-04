@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   resources :organizations, only: [:show]
   resources :users, only: [:create, :new, :index]
+  resources :occupations, only: [:create, :new]
 
   root 'users#index'
 
