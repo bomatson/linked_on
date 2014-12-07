@@ -5,6 +5,8 @@ class OccupationsController < ApplicationController
 
   def create
     @occupation = Occupation.new(occupation_params)
+    
+    @occupation.users << User.find(params[:user_id])
 
     if @occupation.save
       redirect_to root_path
@@ -18,6 +20,6 @@ class OccupationsController < ApplicationController
   private
 
   def occupation_params
-    params.require(:occupation).permit(:title, :user_id)
+    params.require(:occupation).permit(:title)
   end
 end

@@ -4,7 +4,7 @@
   <%= f.text_field :title %>
 
   <%= f.label :user %>
-  <%= f.select :user_id, 
+  <%= select_tag :user_id, 
   options_from_collection_for_select(User.all, :id, :name) %>
 
 

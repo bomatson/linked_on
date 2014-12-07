@@ -1,0 +1,5 @@
+<h1><%= @user.name %></h1>
+
+<% @user.occupations.each do |occupation| %>
+  <h2><%= occupation.title %></h2>
+<% end %>
