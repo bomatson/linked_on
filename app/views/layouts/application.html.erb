@@ -7,14 +7,17 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<div class='container'> 
 
-<h1>Welcome to LinkedOn</h1>
+<h1 class='header'>Welcome to LinkedOn</h1>
 
 <% if flash[:notice] %>
   <p><%= flash[:notice] %> </p>
 <% end %>
 
 <%= yield %>
+
+</div>
 
 </body>
 </html>

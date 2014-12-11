@@ -1,6 +1,6 @@
 <%= link_to 'Create a new user', new_user_path %>
 <%= link_to 'Create a new occupation', new_occupation_path %>
-
 <% @users.each do |user| %>
   <h3><%= link_to user.name, user_path(user.id) %></h3> 
 <% end %>
+
