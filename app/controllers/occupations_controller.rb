@@ -1,4 +1,7 @@
 class OccupationsController < ApplicationController
+
+  before_action :authorize, only: [:create]
+
   def new
     @occupation = Occupation.new
   end
