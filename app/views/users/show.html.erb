@@ -1,5 +1,7 @@
 <h1><%= @user.name %></h1>
 
+<%= image_tag @user.avatar.url, width: 200 %>
+
 <% @user.occupations.each do |occupation| %>
   <h2><%= occupation.title %></h2>
 <% end %>

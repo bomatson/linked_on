@@ -2,5 +2,6 @@
 <%= link_to 'Create a new occupation', new_occupation_path %>
 <% @users.each do |user| %>
   <h3><%= link_to user.name, user_path(user.id) %></h3> 
+  <img src="<%= user.avatar.url%>" width=200>
 <% end %>
 
