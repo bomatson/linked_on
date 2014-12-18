@@ -7,4 +7,15 @@ class User < ActiveRecord::Base
 
   mount_uploader :avatar, AvatarUploader
 
+  scope :employed, -> { where('organization_id IS NOT NULL') }
+
+  def unemployed?
+    occupations.empty?
+  end
+
+  def occupation_names
+    occupations.map do |occupation|
+      occupation.title
+    end
+  end
 end

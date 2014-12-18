@@ -2,6 +2,6 @@
 
 <%= image_tag @user.avatar.url, width: 200 %>
 
-<% @user.occupations.each do |occupation| %>
-  <h2><%= occupation.title %></h2>
+<% @user.occupation_names.each do |name| %>
+  <h2><%= name %></h2>
 <% end %>
